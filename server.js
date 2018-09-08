@@ -28,8 +28,10 @@ app.get('/bad', (req, res) => {
 		errorMessage: 'unable to handle request'
 	}])
 })
-app.listen(3000, () => {
-	console.log('Server is up on port 3000');
+
+var port = proccess.env.PORT || 3000; 
+app.listen(port, () => {
+	console.log(`Server is up on port ${port}`);
 	
 });
 
